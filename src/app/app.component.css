@@ -1,0 +1,20 @@
+.key {
+    height: 6rem;
+    width: 6rem;
+    background-color: gray;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.key:hover {
+    background-color: lightblue;
+    animation-duration: 100ms;
+}
+
+.key-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.5rem;
+}
+
