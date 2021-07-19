@@ -1,6 +1,16 @@
-<div class="key-container">
-  <button *ngFor="let char of chars" (click)="pressed(char)" class="key">
-    {{char}}
-  </button>
+<div class="display">
+  <h2>{{num}}</h2>
+  <h3>{{temp}}</h3>
 </div>
-<p>{{gino}}</p>
+<div class="container">
+  <div class="key-container">
+    <button *ngFor="let char of chars" (click)="pressed(char)" class="key">
+      {{char}}
+    </button>
+  </div>
+  <div class="operand-container">
+    <button *ngFor="let op of operand" (click)="pressed(op)" class="key">
+      {{op}}
+    </button>
+  </div>
+</div>
