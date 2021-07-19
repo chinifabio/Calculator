@@ -14,7 +14,7 @@ export class AppComponent {
 
   title = "calculator";
 
-  chars = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  chars = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "C", "0"];
   operand = ["+", "-", "*", "/"];
 
   operation = "+";
@@ -37,13 +37,12 @@ export class AppComponent {
           this.temp = this.res / this.num;
           break;
       }
-    }
-
-    else {
+    } else if (input == "C") {
+      this.temp = this.res = this.num = 0;
+    } else {
       this.res = this.temp;
       this.num = 0;
       this.operation = input;
-      console.log(this.operation)
     }
   }
 }
